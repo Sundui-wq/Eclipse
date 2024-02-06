@@ -7,7 +7,7 @@ public class lab1 {
 		
 		int number, elem;
 		Scanner scanner= new Scanner(System.in);
-		System.out.print("Элементийн тоог оруулна уу");
+		System.out.print("Жагсаалтын уртыг оруулна уу:");
 		number= scanner.nextInt();
 		MyArrayLinearList l1= new MyArrayLinearList(number);
 		for(int i=0 ; i<number ; i++) {
@@ -82,6 +82,8 @@ public class lab1 {
 		
 	 }
 	}
+	//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
+	//4:19
 }
 	
 
