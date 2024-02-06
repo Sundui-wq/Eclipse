@@ -76,6 +76,7 @@ public class lab1 {
 				
 				default :
 					System.out.println("Алдаа");
+					
 
 		}
 		
