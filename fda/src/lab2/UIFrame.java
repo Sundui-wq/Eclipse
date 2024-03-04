@@ -1,6 +1,6 @@
 package lab2;
 
-
+kjoi
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
