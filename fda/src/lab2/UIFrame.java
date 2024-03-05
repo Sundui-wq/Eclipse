@@ -13,8 +13,7 @@ import java.util.Set;
 public class UIFrame<T extends Comparable<T>> extends JFrame {
 
     private ArrayList<T> itemList;
-
-  
+ 
     private JTextField inputField;
     private JButton addButton;
     private JTextArea displayArea;
@@ -23,7 +22,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
     public UIFrame() {
         itemList = new ArrayList<>();
 
-        setTitle("Generic UI Frame");
+        setTitle("Ерөнхий хүрээ");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -35,7 +34,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
 
     private void initComponents() {
         inputField = new JTextField(20);
-        addButton = new JButton("Add Item");
+        addButton = new JButton("Оруулах");
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,60 +48,54 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
 
     private void addComponents() {
         JPanel inputPanel = new JPanel();
-        inputPanel.add(new JLabel("Enter Item:"));
+        inputPanel.add(new JLabel("Элемент:"));
         inputPanel.add(inputField);
         inputPanel.add(addButton);
 
-        JButton reverseButton = new JButton("Reverse");
+        JButton reverseButton = new JButton("Байрлал солих");
         reverseButton.addActionListener(new ActionListener() {
             
             public void actionPerformed(ActionEvent e) {
                 reverseItems();
             }
         });
-        JButton uniqueButton = new JButton("Unique");
+        JButton uniqueButton = new JButton("Давтагдсан элемент хасах");
         uniqueButton.addActionListener(new ActionListener() {
             
             public void actionPerformed(ActionEvent e) {
                 removeDuplicates();
             }
         });
-        JButton randButton = new JButton("Randomize");
+        JButton randButton = new JButton("Санамсаргүй");
         randButton.addActionListener(new ActionListener() {
             
             public void actionPerformed(ActionEvent e) {
                 randomizeItems();
             }
         });
-        JButton mergeButton = new JButton("Merge");
-        mergeButton.addActionListener(new ActionListener() {
-            
-            public void actionPerformed(ActionEvent e) {
-                mergeItems();
-            }
-        });
-        JButton maxButton = new JButton("Max");
+        
+        JButton maxButton = new JButton("Их");
         maxButton.addActionListener(new ActionListener() {
            
             public void actionPerformed(ActionEvent e) {
                 showMax();
             }
         });
-        JButton minButton = new JButton("Min");
+        JButton minButton = new JButton("Бага ");
         minButton.addActionListener(new ActionListener() {
            
             public void actionPerformed(ActionEvent e) {
                 showMin();
             }
         });
-        JButton sumButton = new JButton("Sum");
+        JButton sumButton = new JButton("Нийлбэр");
         sumButton.addActionListener(new ActionListener() {
             
             public void actionPerformed(ActionEvent e) {
                 showSum();
             }
         });
-        JButton avgButton = new JButton("Average");
+        JButton avgButton = new JButton("Дундаж");
         avgButton.addActionListener(new ActionListener() {
             
             public void actionPerformed(ActionEvent e) {
@@ -110,7 +103,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
             }
         });
        
-        JButton sortButton = new JButton("Sort");
+        JButton sortButton = new JButton("Багаас ихрүү");
         sortButton.addActionListener(new ActionListener() {
            
             public void actionPerformed(ActionEvent e) {
@@ -122,7 +115,6 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
         buttonPanel.add(reverseButton);
         buttonPanel.add(uniqueButton);
         buttonPanel.add(randButton);
-        buttonPanel.add(mergeButton);
         buttonPanel.add(maxButton);
         buttonPanel.add(minButton);
         buttonPanel.add(sumButton);
@@ -153,13 +145,13 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
         }
     }
 
-    // Function to reverse the items in the list
+ 
     private void reverseItems() {
         Collections.reverse(itemList);
         displayItems();
     }
 
-    // Function to remove duplicates from the list
+   
     private void removeDuplicates() {
         Set<T> uniqueItems = new HashSet<>(itemList);
         itemList.clear();
@@ -187,7 +179,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
     private void showMax() {
         if (!itemList.isEmpty()) {
             T maxItem = Collections.max(itemList);
-            JOptionPane.showMessageDialog(this, "Max Item: " + maxItem);
+            JOptionPane.showMessageDialog(this, "Их: " + maxItem);
         }
     }
 
@@ -195,7 +187,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
     private void showMin() {
         if (!itemList.isEmpty()) {
             T minItem = Collections.min(itemList);
-            JOptionPane.showMessageDialog(this, "Min Item: " + minItem);
+            JOptionPane.showMessageDialog(this, "Бага: " + minItem);
         }
     }
 
@@ -205,7 +197,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
             for (T item : itemList) {
                 sum += Double.parseDouble(item.toString());
             }
-            JOptionPane.showMessageDialog(this, "Sum: " + sum);
+            JOptionPane.showMessageDialog(this, "Нийлбэр: " + sum);
         }
     }
 
@@ -217,7 +209,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
                 sum += Double.parseDouble(item.toString());
             }
             double average = sum / itemList.size();
-            JOptionPane.showMessageDialog(this, "Average: " + average);
+            JOptionPane.showMessageDialog(this, "Дундаж: " + average);
         }
     }
 
