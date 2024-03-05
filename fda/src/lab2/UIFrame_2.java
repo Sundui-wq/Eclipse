@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-public class UIFrame<T extends Comparable<T>> extends JFrame {
+public class UIFrame_2<T extends Comparable<T>> extends JFrame {
 
     private ArrayList<T> itemList;
  
@@ -19,7 +19,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
     private JTextArea displayArea;
 
  
-    public UIFrame() {
+    public UIFrame_2() {
         itemList = new ArrayList<>();
 
         setTitle("Ерөнхий хүрээ");
@@ -226,7 +226,7 @@ public class UIFrame<T extends Comparable<T>> extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             
             public void run() {
-                new UIFrame<String>().setVisible(true);
+                new UIFrame_2<String>().setVisible(true);
             }
         });
     }
