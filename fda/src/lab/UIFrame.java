@@ -1,6 +1,6 @@
 package lab;
 
-
+//2:28
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
