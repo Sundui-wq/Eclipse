@@ -5,6 +5,7 @@ import java.awt.event.*;
 
 
 
+
 public class BMICalculator extends JFrame {
     private JLabel weightLabel, heightLabel, bmiLabel;
     private JTextField weightTextField, heightTextField;
