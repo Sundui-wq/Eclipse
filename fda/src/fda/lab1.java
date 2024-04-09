@@ -2,7 +2,8 @@ package fda;
 
 import java.util.*;
 public class lab1 {
-
+	
+ hgh
 	public static void main(String[] args) {
 		
 		int number, elem;
